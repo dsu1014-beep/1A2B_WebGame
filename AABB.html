@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幾A幾B 猜數字遊戲</title>
+    <link rel="stylesheet" href="AABB.css">
+    <script src="AABB.js" defer></script>
+</head>
+<body>
+    <main class="game">
+        <h1>幾A幾B 猜數字遊戲</h1>
+        <form id="guessForm" novalidate>
+            <label for="guessInput">輸入猜測</label>
+            <div class="input-row">
+                <input type="text" id="guessInput" maxlength="4" inputmode="numeric"
+                    placeholder="ex：1234" autocomplete="off" aria-describedby="rules message">
+                <button type="submit" id="guessButton" disabled>確認猜測</button>
+            </div>
+        </form>
+        <p id="message" role="status" aria-live="polite"></p>
+        <section class="history" aria-labelledby="historyTitle">
+            <h2 id="historyTitle">猜測紀錄</h2>
+            <p id="emptyHistory">尚無猜測紀錄</p>
+            <ul id="historyList"></ul>
+        </section>
+        <button type="button" id="restartButton">重新開始</button>
+    </main>
+</body>
+</html>
